@@ -5,15 +5,17 @@
 #ifndef U13_PUNKT_H
 #define U13_PUNKT_H
 
+#include <iostream>
+
 namespace pnkt {
 
-    class punkt {
+    class Punkt {
     private:
         int x;
         int y;
     public:
-        punkt(int x, int y);
-        void translate();
+        Punkt(int x, int y);
+        void translate(int x, int y);
         void drucke();
         std::string getCoords();
         int get_x();

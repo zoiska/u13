@@ -26,7 +26,8 @@ namespace hsaal {
         void set_sitzplaetze(int num);
         void set_name(std::string str);
         int get_sitzplaetze();
-        std::string get_name();
+        std::string get_name() const;
+        bool operator==(const Hörsaal& other);
     };
 
 } // hsaal

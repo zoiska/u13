@@ -30,6 +30,7 @@ namespace hsaal {
 
     int Hörsaal::count() {
         this->besucher += 1;
+        return besucher;
     }
 
     void Hörsaal::reset() {
@@ -48,8 +49,11 @@ namespace hsaal {
         return sitzplaetze;
     }
 
-    std::string Hörsaal::get_name() {
+    std::string Hörsaal::get_name() const {
         return name;
     }
 
+    bool Hörsaal::operator==(const Hörsaal& other) {
+        return this->name == other.get_name();
+    }
 }

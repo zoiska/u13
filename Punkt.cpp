@@ -4,36 +4,36 @@
 
 #include <iostream>
 #include <sstream>
-#include "punkt.h"
+#include "Punkt.h"
 
 namespace pnkt {
 
-    punkt::punkt(int x, int y) {
+    Punkt::Punkt(int x, int y) {
         this->x = x;
         this->y = y;
     }
 
-    void punkt::translate() {
+    void Punkt::translate(int x, int y) {
         this->x += x;
         this->y += y;
     }
 
-    void punkt::drucke() {
+    void Punkt::drucke() {
         std::cout << "(" << get_x() << ", " << get_y() << ")" << std::endl;
     }
 
-    std::string punkt::getCoords() {
+    std::string Punkt::getCoords() {
         std::ostringstream convert;
         convert << "Meine Koordinaten sind ["
                 << this->x << ", " << this->y << "].";
         return convert.str();
     }
 
-    int punkt::get_x() {
+    int Punkt::get_x() {
         return x;
     }
 
-    int punkt::get_y() {
+    int Punkt::get_y() {
         return y;
     }
 
