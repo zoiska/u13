@@ -11,9 +11,15 @@ int main() {
 
     using namespace hsaal;
     Hörsaal saal;
+    saal.reset();
     saal.drucken();
     saal.set_name("LP1");
     saal.set_sitzplaetze(56);
+    saal.drucken();
+
+    for(int i = 20; i > 0; i--){
+        saal.count();
+    }
     saal.drucken();
 
     return 0;

@@ -13,11 +13,16 @@ namespace hsaal {
     private:
         int sitzplaetze;
         std::string name;
+        int besucher;
     public:
         Hörsaal();
         Hörsaal(std::string name);
         Hörsaal(std::string name, int sitzplaetze);
+
         void drucken();
+        int count();
+        void reset();
+
         void set_sitzplaetze(int num);
         void set_name(std::string str);
         int get_sitzplaetze();

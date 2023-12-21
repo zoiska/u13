@@ -9,20 +9,31 @@ namespace hsaal {
     Hörsaal::Hörsaal() {
         this->name = "";
         this->sitzplaetze = 0;
+        this->besucher = 0;
     }
 
     Hörsaal::Hörsaal(std::string name) {
         this->name = name;
         this->sitzplaetze = 0;
+        this->besucher = 0;
     }
 
     Hörsaal::Hörsaal(std::string name, int sitzplaetze) {
         this->name = name;
         this->sitzplaetze = sitzplaetze;
+        this->besucher = 0;
     }
 
     void Hörsaal::drucken() {
-            std::cout << name << ", " << sitzplaetze << std::endl;
+            std::cout << name << ", " << sitzplaetze << ", " << besucher << std::endl;
+    }
+
+    int Hörsaal::count() {
+        this->besucher += 1;
+    }
+
+    void Hörsaal::reset() {
+        this->besucher = 0;
     }
 
     void Hörsaal::set_sitzplaetze(int num) {
