@@ -2,30 +2,53 @@
 // Created by zoisk on 22.12.23.
 //
 
+#include <cmath>
 #include "Bruch.h"
 
 namespace bruch {
-    int Bruch::kuerzen() {
-        return 0;
+    void Bruch::kuerzen() {
+        int teiler = ggt();
+        n /= teiler;
+        z /= teiler;
     }
 
     int Bruch::ggt() {
-        return 0;
+        int a = z;
+        int b = n;
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
     }
 
-    Bruch::Bruch(int n, int z) {
-
+    Bruch::Bruch(int e1, int e2) {
+        if(e1 == 0) {
+            this->z = e2;
+            this->n = 1;
+        }
+        else {
+            this->z = e2;
+            this->n = e1;
+        }
+        kuerzen();
     }
 
     int Bruch::Zähler() {
-        return 0;
+        return this->z;
     }
 
     int Bruch::Nenner() {
-        return 0;
+        return this->n;
     }
 
     double Bruch::reell() {
-        return 0;
+        if(n != 0 && z == 0) {
+            return 0;
+        }
+        else {
+            return static_cast<double>(z) / static_cast<double>(n);
+        }
     }
 } // bruch

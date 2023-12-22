@@ -11,7 +11,7 @@ namespace bruch {
     private:
         int n;
         int z;
-        int kuerzen();
+        void kuerzen();
         int ggt();
     public:
         Bruch(int n, int z);

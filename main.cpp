@@ -1,10 +1,10 @@
 #include <iostream>
 #include "Punkt.h"
 #include "Hörsaal.h"
+#include "Bruch.h"
 
 int main() {
     using namespace pnkt;
-
     Punkt punkt(3, 5);
     Punkt* punkt2 = new Punkt(5, 3);
 
@@ -12,10 +12,12 @@ int main() {
     std::cout << "Punkt 2: (" << punkt2->get_x() << ", " << punkt2->get_y() << ")" << std:: endl;
 
     punkt.translate(5, 3);
-    punkt2->translate(3, 5);
+    punkt2->translate(6, 9);
 
     std::cout << "Punkt 1: (" << punkt.get_x() << ", " << punkt.get_y() << ")" << std::endl;
     std::cout << "Punkt 2: (" << punkt2->get_x() << ", " << punkt2->get_y() << ")" << std:: endl;
+
+    punkt.abstand( *punkt2);
 
 
     using namespace hsaal;
@@ -36,6 +38,11 @@ int main() {
         saal.count();
     }
     saal.drucken();
+
+
+    using namespace bruch;
+    Bruch b1(2, 1);
+    std::cout << b1.reell() << std::endl;
 
     return 0;
 }

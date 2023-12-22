@@ -29,8 +29,7 @@ namespace hsaal {
     }
 
     int Hörsaal::count() {
-        this->besucher += 1;
-        return besucher;
+        return ++besucher;
     }
 
     void Hörsaal::reset() {

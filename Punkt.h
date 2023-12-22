@@ -20,6 +20,7 @@ namespace pnkt {
         std::string getCoords();
         int get_x();
         int get_y();
+        int abstand(Punkt pnkt2);
     };
 
 }
