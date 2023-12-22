@@ -7,4 +7,6 @@ add_executable(u13 main.cpp
         Hörsaal.cpp
         Hörsaal.h
         Punkt.cpp
-        Punkt.h)
+        Punkt.h
+        Bruch.cpp
+        Bruch.h)
