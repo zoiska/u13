@@ -4,20 +4,20 @@
 
 #include <iostream>
 
-#ifndef U13_HÖRSAAL_H
-#define U13_HÖRSAAL_H
+#ifndef U13_HOERSAAL_H
+#define U13_HOERSAAL_H
 
 namespace hsaal {
 
-    class Hörsaal {
+    class Hoersaal {
     private:
         int sitzplaetze;
         std::string name;
         int besucher;
     public:
-        Hörsaal();
-        Hörsaal(std::string name);
-        Hörsaal(std::string name, int sitzplaetze);
+        Hoersaal();
+        Hoersaal(std::string name);
+        Hoersaal(std::string name, int sitzplaetze);
 
         void drucken();
         int count();
@@ -25,11 +25,11 @@ namespace hsaal {
 
         void set_sitzplaetze(int num);
         void set_name(std::string str);
-        int get_sitzplaetze();
+        int get_sitzplaetze() const;
         std::string get_name() const;
-        bool operator==(const Hörsaal& other);
+        bool operator==(const Hoersaal& other);
     };
 
 } // hsaal
 
-#endif //U13_HÖRSAAL_H
+#endif //U13_HOERSAAL_H

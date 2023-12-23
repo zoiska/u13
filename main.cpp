@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Punkt.h"
-#include "Hörsaal.h"
+#include "Hoersaal.h"
 #include "Bruch.h"
 
 int main() {
@@ -21,11 +21,11 @@ int main() {
 
 
     using namespace hsaal;
-    Hörsaal saal("LP1", 100);
-    Hörsaal* saal2 = new Hörsaal("L2", 500);
+    Hoersaal saal("LP1", 100);
+    Hoersaal* saal2 = new Hoersaal("L2", 500);
 
-    std::cout << "Hörsaal " << saal.get_name() << ", Sitzplätze: " << saal.get_sitzplaetze() << std::endl;
-    std::cout << "Hörsaal " << saal2->get_name() << ", Sitzplätze: " << saal2->get_sitzplaetze() << std::endl;
+    std::cout << "Hoersaal " << saal.get_name() << ", Sitzplaetze: " << saal.get_sitzplaetze() << std::endl;
+    std::cout << "Hoersaal " << saal2->get_name() << ", Sitzplaetze: " << saal2->get_sitzplaetze() << std::endl;
 
     if(saal.get_name()==saal2->get_name()) {
         std::cout << "Die Namen sind gleich." << std::endl;

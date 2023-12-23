@@ -2,57 +2,57 @@
 // Created by zoisk on 21.12.23.
 //
 
-#include "Hörsaal.h"
+#include "Hoersaal.h"
 
 namespace hsaal {
 
-    Hörsaal::Hörsaal() {
+    Hoersaal::Hoersaal() {
         this->name = "";
         this->sitzplaetze = 0;
         this->besucher = 0;
     }
 
-    Hörsaal::Hörsaal(std::string name) {
+    Hoersaal::Hoersaal(std::string name) {
         this->name = name;
         this->sitzplaetze = 0;
         this->besucher = 0;
     }
 
-    Hörsaal::Hörsaal(std::string name, int sitzplaetze) {
+    Hoersaal::Hoersaal(std::string name, int sitzplaetze) {
         this->name = name;
         this->sitzplaetze = sitzplaetze;
         this->besucher = 0;
     }
 
-    void Hörsaal::drucken() {
+    void Hoersaal::drucken() {
             std::cout << name << ", " << sitzplaetze << ", " << besucher << std::endl;
     }
 
-    int Hörsaal::count() {
+    int Hoersaal::count() {
         return ++besucher;
     }
 
-    void Hörsaal::reset() {
+    void Hoersaal::reset() {
         this->besucher = 0;
     }
 
-    void Hörsaal::set_sitzplaetze(int num) {
+    void Hoersaal::set_sitzplaetze(int num) {
         this->sitzplaetze = num;
     }
 
-    void Hörsaal::set_name(std::string str) {
+    void Hoersaal::set_name(std::string str) {
         this->name = str;
     }
 
-    int Hörsaal::get_sitzplaetze() {
+    int Hoersaal::get_sitzplaetze() const {
         return sitzplaetze;
     }
 
-    std::string Hörsaal::get_name() const {
+    std::string Hoersaal::get_name() const {
         return name;
     }
 
-    bool Hörsaal::operator==(const Hörsaal& other) {
+    bool Hoersaal::operator==(const Hoersaal& other) {
         return this->name == other.get_name();
     }
 }

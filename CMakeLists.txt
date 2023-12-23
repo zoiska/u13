@@ -4,8 +4,8 @@ project(u13)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(u13 main.cpp
-        Hörsaal.cpp
-        Hörsaal.h
+        Hoersaal.cpp
+        Hoersaal.h
         Punkt.cpp
         Punkt.h
         Bruch.cpp
