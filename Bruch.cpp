@@ -2,7 +2,6 @@
 // Created by zoisk on 22.12.23.
 //
 
-#include <cmath>
 #include "Bruch.h"
 
 namespace bruch {
