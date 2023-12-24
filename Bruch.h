@@ -15,9 +15,13 @@ namespace bruch {
         int ggt();
     public:
         Bruch(int n, int z);
-        int Zähler();
-        int Nenner();
+        int Zaehler() const;
+        int Nenner() const;
         double reell();
+        Bruch operator+(const Bruch& other) const;
+        Bruch operator-(const Bruch& other) const;
+        Bruch operator*(const Bruch& other) const;
+        Bruch operator/(const Bruch& other) const;
     };
 
 } // bruch

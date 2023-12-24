@@ -6,6 +6,18 @@
 #include "Bruch.h"
 
 namespace bruch {
+    Bruch::Bruch(int tn, int tz) {
+        if(tn == 0) {
+            this->z = tz;
+            this->n = 1;
+        }
+        else {
+            this->z = tz;
+            this->n = tn;
+        }
+        kuerzen();
+    }
+
     void Bruch::kuerzen() {
         int teiler = ggt();
         n /= teiler;
@@ -23,23 +35,11 @@ namespace bruch {
         return a;
     }
 
-    Bruch::Bruch(int e1, int e2) {
-        if(e1 == 0) {
-            this->z = e2;
-            this->n = 1;
-        }
-        else {
-            this->z = e2;
-            this->n = e1;
-        }
-        kuerzen();
-    }
-
-    int Bruch::Zähler() {
+    int Bruch::Zaehler() const {
         return this->z;
     }
 
-    int Bruch::Nenner() {
+    int Bruch::Nenner() const {
         return this->n;
     }
 
@@ -51,4 +51,29 @@ namespace bruch {
             return static_cast<double>(z) / static_cast<double>(n);
         }
     }
+
+    Bruch Bruch::operator+(const Bruch& other) const {
+        int tz = this->z * other.Nenner() + other.Zaehler() * this->n;
+        int tn = this->n * other.Nenner();
+        return Bruch(tn, tz);
+    }
+
+    Bruch Bruch::operator-(const Bruch& other) const {
+        int tz = this->z * other.Nenner() - other.Zaehler() * this->n;
+        int tn = this->n * other.Nenner();
+        return Bruch(tn, tz);
+    }
+
+    Bruch Bruch::operator*(const Bruch& other) const {
+        int tz = this->z * other.Zaehler();
+        int tn = this->n * other.Nenner();
+        return Bruch(tn, tz);
+    }
+
+    Bruch Bruch::operator/(const Bruch& other) const {
+        int tz = this->z * other.Nenner();
+        int tn = this->n * other.Zaehler();
+        return Bruch(tn, tz);
+    }
+
 } // bruch
