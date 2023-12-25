@@ -22,6 +22,7 @@ namespace bruch {
         Bruch operator-(const Bruch& other) const;
         Bruch operator*(const Bruch& other) const;
         Bruch operator/(const Bruch& other) const;
+        Bruch zahlenreihe(int num);
     };
 
 } // bruch
