@@ -39,7 +39,27 @@ int main() {
 
 
     Bruch b1(2, 1);
+    Bruch b2(5, 2);
+    Bruch erg1(0, 0);
+    Bruch erg2(0, 0);
+    Bruch erg3(0, 0);
     std::cout << b1.reell() << std::endl;
 
+    erg1 = b1 * b2;
+    std::cout << erg1.reell() << std::endl;
+
+    erg2 = erg2.zahlenreihe(10);
+    std::cout << "(" << erg2.Zaehler() << "/" << erg2.Nenner() << ")" << std::endl;
+    std::cout << erg2.reell() << std::endl;
+
+    double test1 = (1.0/2.0) - (1.0/3.0) + (1.0/4.0) - (1.0/5.0) + (1.0/6.0) - (1.0/7.0) + (1.0/8.0) - (1.0/9.0) + (1.0/10.0);
+    std::cout << test1 << std::endl;
+
+    erg3 = erg3.zahlenreihe(20);
+    std::cout << "(" << erg3.Zaehler() << "/" << erg3.Nenner() << ")" << std::endl;
+    std::cout << erg3.reell() << std::endl;
+
+    double test2 = (1.0/2.0) - (1.0/3.0) + (1.0/4.0) - (1.0/5.0) + (1.0/6.0) - (1.0/7.0) + (1.0/8.0) - (1.0/9.0) + (1.0/10.0) - (1.0/11.0) + (1.0/12.0) - (1.0/13.0) + (1.0/14.0) - (1.0/15.0) + (1.0/16.0) - (1.0/17.0) + (1.0/18.0) - (1.0/19.0) + (1.0/20.0);
+    std::cout << test2 << std::endl;
     return 0;
 }
