@@ -4,7 +4,6 @@
 #include "Bruch.h"
 
 int main() {
-    using namespace pnkt;
     Punkt punkt(3, 5);
     Punkt* punkt2 = new Punkt(5, 3);
 
@@ -20,7 +19,6 @@ int main() {
     punkt.abstand( *punkt2);
 
 
-    using namespace hsaal;
     Hoersaal saal("LP1", 100);
     Hoersaal* saal2 = new Hoersaal("L2", 500);
 
@@ -40,7 +38,6 @@ int main() {
     saal.drucken();
 
 
-    using namespace bruch;
     Bruch b1(2, 1);
     std::cout << b1.reell() << std::endl;
 

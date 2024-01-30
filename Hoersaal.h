@@ -1,13 +1,7 @@
-//
-// Created by zoisk on 21.12.23.
-//
-
-#include <iostream>
-
 #ifndef U13_HOERSAAL_H
 #define U13_HOERSAAL_H
 
-namespace hsaal {
+#include <iostream>
 
     class Hoersaal {
     private:
@@ -29,7 +23,5 @@ namespace hsaal {
         std::string get_name() const;
         bool operator==(const Hoersaal& other);
     };
-
-} // hsaal
 
 #endif //U13_HOERSAAL_H

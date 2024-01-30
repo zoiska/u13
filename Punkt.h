@@ -1,13 +1,7 @@
-//
-// Created by zoisk on 21.12.23.
-//
-
 #ifndef U13_PUNKT_H
 #define U13_PUNKT_H
 
 #include <iostream>
-
-namespace pnkt {
 
     class Punkt {
     private:
@@ -22,7 +16,5 @@ namespace pnkt {
         int get_y();
         int abstand(Punkt pnkt2);
     };
-
-}
 
 #endif //U13_PUNKT_H
