@@ -3,18 +3,18 @@
 
 #include <iostream>
 
-    class Punkt {
-    private:
-        int x;
-        int y;
-    public:
-        Punkt(int x, int y);
-        void translate(int x, int y);
-        void drucke();
-        std::string getCoords();
-        int get_x();
-        int get_y();
-        int abstand(Punkt pnkt2);
-    };
+class Punkt {
+private:
+    int x;
+    int y;
+public:
+    Punkt(int x, int y);
+    void translate(int x, int y);
+    void drucke();
+    std::string getCoords();
+    int get_x();
+    int get_y();
+    int abstand(Punkt pnkt2);
+};
 
 #endif //U13_PUNKT_H
