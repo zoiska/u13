@@ -1,7 +1,8 @@
 #include <iostream>
-#include "Punkt.h"
-#include "Hoersaal.h"
-#include "Bruch.h"
+#include "Punkt/Punkt.h"
+#include "Hoersaal/Hoersaal.h"
+#include "Bruch/Bruch.h"
+#include "VeryLong/VeryLong.h"
 
 int main() {
 //-----------------Punkt----------------
@@ -62,5 +63,22 @@ int main() {
 
     double test2 = (1.0/2.0) - (1.0/3.0) + (1.0/4.0) - (1.0/5.0) + (1.0/6.0) - (1.0/7.0) + (1.0/8.0) - (1.0/9.0) + (1.0/10.0) - (1.0/11.0) + (1.0/12.0) - (1.0/13.0) + (1.0/14.0) - (1.0/15.0) + (1.0/16.0) - (1.0/17.0) + (1.0/18.0) - (1.0/19.0) + (1.0/20.0);
     std::cout << test2 << std::endl;    //Test für Zahlenreihe mit 20 Brüchen
+
+//-------------VeryLong-----------------
+    int arr[50];
+
+    for(int i = 1; i <= 50; i++) {
+        arr[i-1] = i;
+    }
+
+    for(int j = 0; j <= 49; j++) {
+        std::cout << arr[j];
+    }
+
+
+
+
+    //VeryLong(longarr, 100);
+
     return 0;
 }
