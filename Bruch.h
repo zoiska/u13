@@ -5,8 +5,6 @@
 #ifndef U13_BRUCH_H
 #define U13_BRUCH_H
 
-namespace bruch {
-
     class Bruch {
     private:
         int n;
@@ -25,6 +23,5 @@ namespace bruch {
         Bruch zahlenreihe(int num);
     };
 
-} // bruch
 
 #endif //U13_BRUCH_H

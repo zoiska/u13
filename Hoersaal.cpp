@@ -4,8 +4,6 @@
 
 #include "Hoersaal.h"
 
-namespace hsaal {
-
     Hoersaal::Hoersaal() {
         this->name = "";
         this->sitzplaetze = 0;
@@ -55,4 +53,3 @@ namespace hsaal {
     bool Hoersaal::operator==(const Hoersaal& other) {
         return this->name == other.get_name();
     }
-}

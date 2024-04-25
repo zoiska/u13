@@ -7,8 +7,6 @@
 
 #include <iostream>
 
-namespace pnkt {
-
     class Punkt {
     private:
         int x;
@@ -23,6 +21,5 @@ namespace pnkt {
         int abstand(Punkt pnkt2);
     };
 
-}
 
 #endif //U13_PUNKT_H

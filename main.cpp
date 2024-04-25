@@ -4,7 +4,7 @@
 #include "Bruch.h"
 
 int main() {
-    using namespace pnkt;
+//-----------------Punkt----------------
     Punkt punkt(3, 5);
     Punkt* punkt2 = new Punkt(5, 3);
 
@@ -19,8 +19,7 @@ int main() {
 
     punkt.abstand( *punkt2);
 
-
-    using namespace hsaal;
+//-----------------Hoersaal----------------
     Hoersaal saal("LP1", 100);
     Hoersaal* saal2 = new Hoersaal("L2", 500);
 
@@ -39,8 +38,7 @@ int main() {
     }
     saal.drucken();
 
-
-    using namespace bruch;
+//-----------------Bruch----------------
     Bruch b1(2, 1);
     Bruch b2(5, 2);
     Bruch erg1(0, 0);
@@ -56,13 +54,13 @@ int main() {
     std::cout << erg2.reell() << std::endl;
 
     double test1 = (1.0/2.0) - (1.0/3.0) + (1.0/4.0) - (1.0/5.0) + (1.0/6.0) - (1.0/7.0) + (1.0/8.0) - (1.0/9.0) + (1.0/10.0);
-    std::cout << test1 << std::endl;
+    std::cout << test1 << std::endl;    //Test für Zahlenreihe mit 10 Brüchen
 
     erg3 = erg3.zahlenreihe(20);
     std::cout << "(" << erg3.Zaehler() << "/" << erg3.Nenner() << ")" << std::endl;
     std::cout << erg3.reell() << std::endl;
 
     double test2 = (1.0/2.0) - (1.0/3.0) + (1.0/4.0) - (1.0/5.0) + (1.0/6.0) - (1.0/7.0) + (1.0/8.0) - (1.0/9.0) + (1.0/10.0) - (1.0/11.0) + (1.0/12.0) - (1.0/13.0) + (1.0/14.0) - (1.0/15.0) + (1.0/16.0) - (1.0/17.0) + (1.0/18.0) - (1.0/19.0) + (1.0/20.0);
-    std::cout << test2 << std::endl;
+    std::cout << test2 << std::endl;    //Test für Zahlenreihe mit 20 Brüchen
     return 0;
 }

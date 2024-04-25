@@ -7,8 +7,6 @@
 #include <cmath>
 #include "Punkt.h"
 
-namespace pnkt {
-
     Punkt::Punkt(int x, int y) {
         this->x = x;
         this->y = y;
@@ -46,5 +44,3 @@ namespace pnkt {
         std::cout << sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2)) << std::endl;
         return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
     }
-
-}

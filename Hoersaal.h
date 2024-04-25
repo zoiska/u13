@@ -7,8 +7,6 @@
 #ifndef U13_HOERSAAL_H
 #define U13_HOERSAAL_H
 
-namespace hsaal {
-
     class Hoersaal {
     private:
         int sitzplaetze;
@@ -30,6 +28,5 @@ namespace hsaal {
         bool operator==(const Hoersaal& other);
     };
 
-} // hsaal
 
 #endif //U13_HOERSAAL_H
