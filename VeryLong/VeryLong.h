@@ -8,13 +8,15 @@
 #include <iostream>
 
 class VeryLong{
-private:
-    //int longarr[];
-    int length;
 public:
     VeryLong(int arr[], int len);
-    int normalisiere();
+    void normalisiere();
     void drucke();
+    int getLength() const;
+    VeryLong operator+(VeryLong other);
+private:
+    int length;
+    int longarr[];
 };
 
 #endif //$VERYLONG_H

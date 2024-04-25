@@ -65,20 +65,20 @@ int main() {
     std::cout << test2 << std::endl;    //Test für Zahlenreihe mit 20 Brüchen
 
 //-------------VeryLong-----------------
-    int arr[50];
-
-    for(int i = 1; i <= 50; i++) {
-        arr[i-1] = i;
+    int arr[5000];
+    for(int i = 1; i <= 5000; i++) {
+        arr[i-1] = rand() % 10;
     }
 
-    for(int j = 0; j <= 49; j++) {
-        std::cout << arr[j];
-    }
+    VeryLong number1(arr, 5000);
+    number1.drucke();
 
 
-
-
-    //VeryLong(longarr, 100);
+    int arr2[20] = {0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 0, 0, 0, 0, 1, 2, 3, 4};
+    VeryLong number2(arr2, 20);
+    number2.drucke();
+    number2.normalisiere();
+    number2.drucke();
 
     return 0;
 }
