@@ -77,9 +77,7 @@ Bruch Bruch::operator/(const Bruch& other) const {
 Bruch Bruch::zahlenreihe(int num) {
     Bruch erg(0, 0);
     for (int i = 2; i <= num; i++) {
-        if (i == 2) {
-            erg = erg + Bruch(i, 1);
-        } else if (i % 2 == 0) {
+        if (i % 2 == 0) {
             erg = erg + Bruch(i, 1);
         } else {
             erg = erg - Bruch(i, 1);

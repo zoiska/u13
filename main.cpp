@@ -70,14 +70,23 @@ int main() {
     }
 
     VeryLong number1(arr, 5000);
-    number1.drucke();
+    number1.print();
 
 
     int arr2[20] = {0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 0, 0, 0, 0, 1, 2, 3, 4};
     VeryLong number2(arr2, 20);
-    number2.drucke();
+    number2.print();
     number2.normalisiere();
-    number2.drucke();
+    number2.print();
+
+    int arr3[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 8};
+    int arr4[10] = {9, 8, 7, 6, 5, 4, 3, 6, 5, 2};
+    VeryLong number3(arr3, 10);
+    VeryLong number4(arr4, 10);
+
+    VeryLong newLong = number3 + number4;
+
+    newLong.print();
 
     return 0;
 }
