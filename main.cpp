@@ -1,4 +1,3 @@
-#include <iostream>
 #include "Punkt/Punkt.h"
 #include "Hoersaal/Hoersaal.h"
 #include "Bruch/Bruch.h"
